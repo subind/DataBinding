@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Data Binding Practice</string>
+    <string name="hello_world">Hello World</string>
 </resources>

@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    //Step 2: Introduce plugin for kotlin annotation processor
     id 'kotlin-kapt'
 }
 
@@ -30,6 +31,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    // Step 1
     buildFeatures {
         dataBinding true
     }
