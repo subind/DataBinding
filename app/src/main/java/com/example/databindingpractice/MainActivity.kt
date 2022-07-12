@@ -6,6 +6,8 @@ import androidx.databinding.DataBindingUtil
 import com.example.databindingpractice.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    var namesList = mutableListOf<String>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -26,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         /*binding.include2.secondTv.text = getString(R.string.subind_here)
         binding.include3.secondTv.text = getString(R.string.from_india)*/
 
+        resources.getStringArray(R.array.names).forEach {
+            namesList.add(it)
+        }
+
         /**
          * Data is not set with help of individual view ids anymore, but rather data is bound directly
          * to the view itself in the layout file. Only the variable within the data tag need to be set in the activity/viewModel
@@ -33,7 +39,9 @@ class MainActivity : AppCompatActivity() {
         val user = User(
             greeting = getString(R.string.hello_world),
             name = getString(R.string.subind_here),
-            origin = getString(R.string.from_india)
+            origin = getString(R.string.from_india),
+            gender = false,
+            nameList = namesList
         )
         binding.user = user
     }
