@@ -19,11 +19,24 @@ class MainActivity : AppCompatActivity() {
          * Using the instance of which the id's within the layout can be accessed.
          */
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-        binding.helloTv.text = getString(R.string.hello_world)
+        /*binding.helloTv.text = getString(R.string.hello_world)*/
         /**
          * Make sure to have an id for the include tags, & also that the included layouts should be enclosed within layout tags
          */
-        binding.include2.secondTv.text = getString(R.string.subind_here)
-        binding.include3.secondTv.text = getString(R.string.from_india)
+        /*binding.include2.secondTv.text = getString(R.string.subind_here)
+        binding.include3.secondTv.text = getString(R.string.from_india)*/
+
+        /**
+         * Data is not set with help of individual view ids anymore, but rather data is bound directly
+         * to the view itself in the layout file. Only the variable within the data tag need to be set in the activity/viewModel
+         */
+        val user = User(
+            greeting = getString(R.string.hello_world),
+            name = getString(R.string.subind_here),
+            origin = getString(R.string.from_india)
+        )
+        binding.user = user
     }
+
+
 }
