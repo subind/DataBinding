@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Data Binding Practice</string>
     <string name="hello_world">Hello World</string>
+    <string name="subind_here">Subind here</string>
+    <string name="from_india">from India</string>
+    <string name="second_activitys_textview">Second Activity\'s TextView</string>
 </resources>

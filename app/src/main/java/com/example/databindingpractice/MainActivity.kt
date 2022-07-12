@@ -20,5 +20,10 @@ class MainActivity : AppCompatActivity() {
          */
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         binding.helloTv.text = getString(R.string.hello_world)
+        /**
+         * Make sure to have an id for the include tags, & also that the included layouts should be enclosed within layout tags
+         */
+        binding.include2.secondTv.text = getString(R.string.subind_here)
+        binding.include3.secondTv.text = getString(R.string.from_india)
     }
 }
